@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone & Rescue System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(0,0,0,0.8);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #00eaff;
+      animation: slideIn 1s ease;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00eaff;
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    section h2 {
+      color: #00eaff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 1.5s ease;
+    }
+    .icon-box {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #00eaff;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 1rem;
+      flex: 1;
+      min-width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    footer {
+      background: rgba(0,0,0,0.9);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @keyframes slideIn {
+      from {opacity: 0; transform: translateX(-50px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1523966211575-eb4a6b8ca0b6?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 2s ease;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #00eaff;
+    }
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      background: #00eaff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #00cce0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-drone"></i> Drone & Rescue</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#ui">UI Flow</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section class="hero">
+    <div class="hero-content">
+      <h1>Smart Drone & Rescue System</h1>
+      <p>Revolutionizing emergency response in India with autonomous drones and robots.</p>
+      <button class="btn">Learn More</button>
+    </div>
+  </section>  <section id="about">
+    <h2>About the Project</h2>
+    <p>Our solution leverages advanced drones and robots to manage <strong>medical emergencies</strong> and <strong>search & rescue operations</strong>, ensuring quick response in difficult terrains and disaster zones.</p>
+  </section>  <section id="features">
+    <h2>Key Features</h2>
+    <div class="flex-container">
+      <div class="card">
+        <div class="icon-box"><i class="fa-solid fa-truck-medical"></i></div>
+        <h3>Medical Delivery</h3>
+        <p>Transport blood, vaccines, and medicines with temperature-controlled payloads.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
+        <h3>Search & Rescue</h3>
+        <p>Real-time video feed and AI-assisted human detection during disasters.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h3>Autonomous Navigation</h3>
+        <p>GPS, LIDAR, and AI path planning for obstacle avoidance and safe flights.</p>
+      </div>
+    </div>
+  </section>  <section id="ui">
+    <h2>UI Flow</h2>
+    <div class="flex-container">
+      <div class="card"><i class="fa-solid fa-house icon-box"></i><h3>Home</h3><p>Request supplies or rescue support.</p></div>
+      <div class="card"><i class="fa-solid fa-clipboard-list icon-box"></i><h3>Request</h3><p>Choose emergency type, location, priority.</p></div>
+      <div class="card"><i class="fa-solid fa-map-location-dot icon-box"></i><h3>Tracking</h3><p>Live map and ETA for the drone delivery.</p></div>
+      <div class="card"><i class="fa-solid fa-check-circle icon-box"></i><h3>Confirmation</h3><p>Delivery completed with time stamp and proof.</p></div>
+    </div>
+  </section>  <section id="team">
+    <h2>Our Team</h2>
+    <p>Innovators dedicated to solving real-world challenges with cutting-edge technology.</p>
+  </section>  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: vishwarajsinh2212@gmail.com| Phone: </p>
+  </section>  <footer>
+    <p>© 2025 Drone & Rescue Project. All rights reserved.</p>
+  </footer>  <script>
+    // Smooth scroll effect
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script></body>
+</html>
